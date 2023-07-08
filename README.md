@@ -8,8 +8,8 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 ### Links and Resources
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+* [submission PR](https://github.com/joyagh/horned-beasts/pull/1)
+
 
 ### Lighthouse Accessibility Report Score
 
