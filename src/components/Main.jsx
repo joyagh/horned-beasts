@@ -17,6 +17,7 @@ class Main extends React.Component {
     return (
       <div>
         <h2>Horned Animals: </h2>
+
         <div>{imgComponents}</div>
       </div>
     );
