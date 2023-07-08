@@ -4,8 +4,10 @@ class Footer extends React.Component {
      render() {
           return (
                <div>
-                    <footer>Justine Oyaghiro</footer>
+                    <footer>&copy; Justine Oyaghiro</footer>
                </div>
           )
      }
 }
+
+export default Footer;
