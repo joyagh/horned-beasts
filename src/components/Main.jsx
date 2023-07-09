@@ -1,6 +1,7 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 import data from "./data.json";
+import Card from "react-bootstrap/Card";
 
 class Main extends React.Component {
   render() {
@@ -15,11 +16,11 @@ class Main extends React.Component {
       );
     });
     return (
-      <div>
+      <Card>
         <h2>Horned Animals: </h2>
 
         <div>{imgComponents}</div>
-      </div>
+      </Card>
     );
   }
 }

@@ -19,7 +19,7 @@ class HornedBeast extends React.Component {
 
         <img src={this.props.imgUrl} />
         <p>{this.props.description}</p>
-        <p onClick={this.handleLike}>Like</p>
+        <p onClick={this.handleLike}>Like💚</p>
         <p>This has been liked {this.state.likeCount} times.</p>
       </div>
     );
