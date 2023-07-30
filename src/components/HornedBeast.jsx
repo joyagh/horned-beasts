@@ -14,7 +14,7 @@ class HornedBeast extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div onClick={this.props.onClickBeast}>
         <h2>{this.props.title}</h2>
 
         <img src={this.props.imgUrl} />

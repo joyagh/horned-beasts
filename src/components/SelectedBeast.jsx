@@ -7,24 +7,37 @@ class SelectedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideModal: 'hideModal',
+      hideModal: "hideModal",
     };
   }
-  onClick=() => {this.setState({hideModal: "hideModal"})}
+  onClick = () => {
+    this.props.closeModal();
+  };
   render() {
     return (
       <div className={`modal ${this.state.hideModal}`}>
         <Modal.Dialog>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
+          <Modal.Header closeButton onClick={this.onClick}>
+            <Modal.Title>
+              {this.props.currentSelectedBeast.beast.title}
+            </Modal.Title>
           </Modal.Header>
 
           <Modal.Body>
-            <p>Modal body text goes here.</p>
+            <div className="modalImg">
+              <img
+                src={this.props.currentSelectedBeast.beast.image_url}
+                alt={this.props.currentSelectedBeast.beast.title}
+              />
+            </div>
+
+            <p>{this.props.currentSelectedBeast.beast.description}</p>
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="secondary" onClick = {this.onClick}>Close</Button>
+            <Button variant="secondary" onClick={this.onClick}>
+              Close
+            </Button>
           </Modal.Footer>
         </Modal.Dialog>
       </div>

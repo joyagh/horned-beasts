@@ -10,19 +10,23 @@ class App extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      selectedBeast: {},
+      currentSelectedBeast: {isOpen: false},
     }
   }
-  getSelectedBeast(beast) {
-   this.setState({selectedBeast: beast}) 
+  getSelectedBeast = (beast) => {
+   this.setState({currentSelectedBeast: {beast, isOpen: true}}) 
+  }
+  closeModal = () => {
+    this.setState({currentSelectedBeast: {isOpen: false}})
   }
   render() {
     
     return (
       <div>
+        {console.log(this.state.currentSelectedBeast)}
         <Header />
-        <Main getSelectedBeast = {getSelectedBeast}/>
-        <SelectedBeast />
+        <Main getSelectedBeast = {this.getSelectedBeast}/>
+        {this.state.currentSelectedBeast.isOpen  && <SelectedBeast currentSelectedBeast = {this.state.currentSelectedBeast} closeModal = {this.closeModal}/>}
         <Footer />
       </div>
     );
