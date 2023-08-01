@@ -4,6 +4,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import SelectedBeast from './components/SelectedBeast';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NumForm from './components/NumForm';
 
 class App extends React.Component {
 
@@ -27,6 +28,7 @@ class App extends React.Component {
         <Header />
         <Main getSelectedBeast = {this.getSelectedBeast}/>
         {this.state.currentSelectedBeast.isOpen  && <SelectedBeast currentSelectedBeast = {this.state.currentSelectedBeast} closeModal = {this.closeModal}/>}
+        <NumForm />
         <Footer />
       </div>
     );
