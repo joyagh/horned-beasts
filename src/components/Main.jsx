@@ -1,6 +1,5 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-import data from "./data.json";
 import Card from "react-bootstrap/Card";
 
 class Main extends React.Component {
@@ -16,9 +15,9 @@ class Main extends React.Component {
       <>
         <Card>
           <h2>Horned Animals: </h2>
-          {console.log(data)}
+          
           <div>
-            {data.map((beast, index) => (
+            {this.props.data.map((beast, index) => (
               <div
                 onClick={() => {
                   this.onClickBeast(beast);
