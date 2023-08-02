@@ -5,10 +5,10 @@
      display: block !important;
 }
 
-/* .modalImg {
+.modalImg {
      width: 300px;
      height: 300px;
-} */
+}
 .modalImg {
 height:100%;
 width: 100%;
